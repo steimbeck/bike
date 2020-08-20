@@ -8,6 +8,8 @@ img
     border:2px solid black;
     height:400px;
     width: 600px;
+    position :relative;
+    
     
 
    
@@ -41,4 +43,37 @@ img
     -moz-transform: translateY(3px);
     -ms-transform: translateY(3px);
     -o-transform: translateY(3px);
+}
+
+#previous
+{
+    
+   position:absolute;
+   margin-left:380px;
+   margin-top:-350px;
+}
+#next
+{
+    position:absolute;
+    margin-left :920px;
+    margin-top: -355px;
+}
+
+#previous,#next
+{
+    font-size :1.7em;
+    border:none;
+    background-color: rgba(0,0,0,0.0);
+    color: white;
+    cursor: pointer;
+    
+    
+    
+       
+}
+#previous:hover,#next:hover
+{
+    color:rgb(5, 94, 129);
+    
+
 }
