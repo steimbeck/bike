@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/css/bike.css">
     <title>Location vélo</title>
 </head>
 <body>
+    
     <div id="diapo">
-     </div>
+        </div>
+     
+     
+     
+        <button id ="previous"> <  </button>
+    
+    <button id ="next"> > </button>
+    
+    
     
 
         
@@ -39,12 +49,24 @@ class DiapoController {
             description: "Ma troisème diapo",
             imgSrc:"https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
             
+            
         }))
+        const previous =document.getElementById("previous")
+        const next =document.getElementById("next");
+        previous.addEventListener("click",this.previous.bind(this));
+        next.addEventListener("click", this.next.bind(this));
+
+        
+
+     
+
         this.currentIndex = 0
         this.displayCurrent();
         this.initializeKeyEvents();
         
     }
+
+    
 
     initializeKeyEvents() {
         window.addEventListener("keydown", (evt) => {
@@ -58,9 +80,13 @@ class DiapoController {
     }
 
     play() {
-        setInterval(this.next.bind(this), 5000)
+        this.interval=0
+        this.interval=setInterval(this.next.bind(this), 5000);
     }
-    pause() {}
+    pause() {
+
+        clearInterval(this.interval);
+    }
     next() {
         if (this.currentIndex + 1 === this.diapoList.diapos.length) {
             this.currentIndex = 0
@@ -71,6 +97,7 @@ class DiapoController {
     }
     previous() {
         this.currentIndex -= 1
+
         this.displayCurrent()
     }
     displayCurrent() {
@@ -100,6 +127,7 @@ class DiapoView {
             title: "Play",
             onClick: onPlay
         }).render())
+        
     }
 
     render({imgSrc, title, description}) {
@@ -117,7 +145,7 @@ class DiapoView {
 }
 
 class ButtonView {
-    constructor({title, onClick, /* une classe que tu pourra implémenter coté css**/}) {
+    constructor({title, onClick,}) {
         this.title = title;
         this.onClick = onClick;
     }
@@ -125,6 +153,7 @@ class ButtonView {
         const buttonElement = document.createElement("button")
         buttonElement.textContent = this.title;
         buttonElement.addEventListener("click", this.onClick);
+        buttonElement.classList.add("nav")
         return buttonElement;
     }
 }
@@ -147,19 +176,10 @@ class DiapoList {
         this.diapos.push(diapo)
     }
 }
-const image = ["/image/bicloo-nantes.jpg","/image/bicloo14.jpg","/image/bicloo18.jpg"]
-var num = 0;
-
-function next() {
-    var slider = document.getElementById("diapo");
-    num++;
-    if(num >= images.length) {
-        num = 0;
-    }
-    slider.src = images[num];
-}
 
 new DiapoController()
+
+
 
 
 

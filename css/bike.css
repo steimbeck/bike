@@ -1,0 +1,44 @@
+#diapo
+{
+
+    text-align :center;
+}
+img
+{
+    border:2px solid black;
+    height:400px;
+    width: 600px;
+    
+
+   
+}
+
+.nav
+{
+    color:white;
+    background-color: rgb(23, 147, 195);
+    border-radius:12px ;
+    -webkit-border-radius:12px ;
+    -moz-border-radius:12px ;
+    -ms-border-radius:12px ;
+    -o-border-radius:12px ;
+    border:none;
+    margin-left: 10px;
+    padding: 10px 8px;
+    font-size: 0.6em;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 3px rgb(23, 136, 211);
+    
+    
+}
+.nav:hover
+{
+    box-shadow: 0 0px rgb(23, 136, 211);
+    transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    -o-transform: translateY(3px);
+}

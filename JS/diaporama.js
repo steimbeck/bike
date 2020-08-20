@@ -43,9 +43,12 @@ class DiapoController {
     }
 
     play() {
-        setInterval(this.next.bind(this), 5000)
+        this.interval=setInterval(this.next.bind(this), 5000)
     }
-    pause() {}
+    pause() {
+
+        clearInterval(this.interval);
+    }
     next() {
         if (this.currentIndex + 1 === this.diapoList.diapos.length) {
             this.currentIndex = 0
@@ -134,13 +137,6 @@ class DiapoList {
 }
 
 
-function next() {
-    var slider = document.getElementById("diapo");
-    num++;
-    if(num >= images.length) {
-        num = 0;
-    }
-    slider.src = images[num];
-}
+
 
 new DiapoController()
