@@ -5,7 +5,7 @@
 }
 img
 {
-    border:2px solid black;
+    /*border:2px solid black;*/
     height:400px;
     width: 600px;
     position :relative;
@@ -76,4 +76,13 @@ img
     color:rgb(5, 94, 129);
     
 
+}
+#map
+{
+    height:400px;
+    width:100%;
+    
+    
+    
+    
 }
