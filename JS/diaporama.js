@@ -16,7 +16,7 @@ class DiapoController {
         this.diapoList.addDiapo(new Diapo({
             title: "diapo 2",
             description: "Ma deuxième diapo",
-            imgSrc:"/image/bicloo20.jpg",
+            imgSrc:"image/bicloo20.jpg",
             
         }))
         this.diapoList.addDiapo(new Diapo({
