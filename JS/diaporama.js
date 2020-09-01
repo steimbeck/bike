@@ -67,7 +67,7 @@ class DiapoController {
         if (this.currentIndex + 1 === this.diapoList.diapos.length) {
             this.currentIndex = 0
         } else {
-            this.currentIndex += 1
+            this.currentIndex += 1;
         }
         this.displayCurrent()
     }
@@ -124,7 +124,7 @@ class DiapoView {
     }
 
 
-}
+}   
 
 class ButtonView {
     constructor({title, onClick,}) {
