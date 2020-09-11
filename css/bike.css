@@ -15,7 +15,7 @@ img
    
 }
 
-.nav
+.nav,#submit,#confirmation
 {
     color:white;
     background-color: rgb(23, 147, 195);
@@ -35,7 +35,7 @@ img
     
     
 }
-.nav:hover
+.nav:hover,#submit:hover,#confirmation:hover
 {
     box-shadow: 0 0px rgb(23, 136, 211);
     transform: translateY(3px);

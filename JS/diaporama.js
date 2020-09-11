@@ -56,7 +56,7 @@ class DiapoController {
     }
 
     play() {
-        this.interval=0
+        
         this.interval=setInterval(this.next.bind(this), 5000);
     }
     pause() {
@@ -67,19 +67,17 @@ class DiapoController {
         if (this.currentIndex + 1 === this.diapoList.diapos.length) {
             this.currentIndex = 0
         } else {
-            this.currentIndex += 1;
+            this.currentIndex += 1
         }
         this.displayCurrent()
     }
     previous() {
         
          
-        if (this.currentIndex  <= 0) {
-            this.currentIndex  === (this.diapoList.diapos.length)
-        } else {
-            this.currentIndex --;
-        }
-
+       this.currentIndex--;
+       if (this.currentIndex < 0) {
+        this.currentIndex = this.diapoList.diapos.length-1;
+    };
         this.displayCurrent()
     }
     displayCurrent() {
@@ -124,7 +122,7 @@ class DiapoView {
     }
 
 
-}   
+}
 
 class ButtonView {
     constructor({title, onClick,}) {
