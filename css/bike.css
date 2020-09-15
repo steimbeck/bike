@@ -87,6 +87,15 @@ img
     
 }
 
+
+#canvas{
+
+width: 250px;
+height: 130px;
+border:2px solid green;
+
+}
+
 @media screen and (max-width:1160px){
 
     #previous
