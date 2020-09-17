@@ -3,7 +3,7 @@ class SignCanvas {
     
     constructor() { 
         this.sign = document.getElementById("canvas");
-        this.context =this.sign.getContext('2d');
+        this.ctx = this.sign.getContext('2d');
         this.ctx.strokeStyle = '#006400';
         this.ctx.lineWidth = 4;
         this.draw = false;
@@ -12,9 +12,9 @@ class SignCanvas {
             y: 0
         };
         this.lastPosition = this.mousePosition;
-        this.clearButton = document.getElementById("clean");
+        this.clearButton = document.getElementById("cleansign");
         this.sign.width = 220;
-        this.sign.height = 180;
+        this.sign.height = 200;
     }
 
     //Gestion des événements 
@@ -32,7 +32,7 @@ class SignCanvas {
         });
 
         // this.canvas.addEventListener("mouseup", function (e) {
-        //     self.draw = false;
+        //     pen.draw = false;
         // });
         document.addEventListener("mouseup", (e) => {
                 pen.draw = false;
@@ -41,7 +41,7 @@ class SignCanvas {
 
 
         
-  //Effacer
+  //Effacer la signature
         this.clearButton.addEventListener("click", (e) => {
             pen.clearsign()
         });
@@ -78,5 +78,5 @@ class SignCanvas {
 
 }
 
-var obj = new SignCanvas();
+let obj = new SignCanvas();
 obj.moveSign();

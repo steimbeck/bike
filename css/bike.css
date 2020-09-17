@@ -80,7 +80,7 @@ img
 #map
 {
     height:400px;
-    width:100%;
+    width:50%;
     
     
     
@@ -91,11 +91,38 @@ img
 #canvas{
 
 width: 250px;
-height: 130px;
-border:2px solid green;
+height: 150px;
+border:2px solid  rgb(49, 138, 49);
 
 }
 
+#cleansign
+{
+     border:2px solid rgb(6, 110, 23);
+     background-color: rgb(28, 167, 47);
+     box-shadow: 0px 3px rgb(8, 184, 46);
+     padding-left: 10px;
+     padding-right: 10px;
+     color: white;
+     cursor:pointer;
+     border:none;
+     font-weight: bold;
+     border-radius:12px ;
+     -webkit-border-radius:12px ;
+     -moz-border-radius:12px ;
+     -ms-border-radius:12px ;
+     -o-border-radius:12px ;
+}
+#cleansign:hover
+{
+    
+    transform:translateY();
+    
+    -moz-transform:translateY();
+    -ms-transform:translateY();
+    -o-transform:translateY();
+    -webkit-transform:translateY();
+}
 @media screen and (max-width:1160px){
 
     #previous

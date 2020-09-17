@@ -9,7 +9,7 @@ class Mapview {
     
             L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
                 maxZoom: 20
-            }).addTo(map);
+            }).addTo(map) 
     
           
     
@@ -50,21 +50,24 @@ class Mapview {
                 } of stations) {
                 L.marker([lat, lng], {
                     icon: greenIcon
-                }).on("click", () => this.onClick(station)).addTo(map)
+                }).on("click", () => this.onClick(station)).addTo(map).bindPopup( `Station :   ${station.name},<br><br>  Adresse: ${station.address},<br><br> Nombre de vélos disponibles  : ${station.available_bikes}`)
+
     
     
                   if (station.available_bikes === 0) {
     
                     L.marker([lat, lng], {
                         icon: redIcon
-                    }).on("click", () => this.onClick(station)).addTo(map)
+                    }).on("click", () => this.onClick(station)).addTo(map).bindPopup( `Station :   ${station.name},<br><br>  Adresse: ${station.address},<br><br> Nombre de vélos disponibles  : ${station.available_bikes}`)
+
                     
     
                 } else if (station.available_bikes < 5){
     
                         L.marker([lat, lng], {
                             icon: orangeIcon
-                        }).on("click", () => this.onClick(station)).addTo(map)
+                        }).on("click", () => this.onClick(station)).addTo(map).bindPopup( `Station :   ${station.name},<br><br>  Adresse: ${station.address},<br><br> Nombre de vélos disponibles  : ${station.available_bikes}`)
+
                     
                 };
     
