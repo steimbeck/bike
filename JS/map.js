@@ -154,6 +154,8 @@ class Mapview {
         render() {
             const form = document.getElementById('bookingForm')
             document.getElementById('submit').addEventListener('click', () => this.onSubmit(form))
+            //alert("Noubliez pas de signer et de confirmer la réservation")
+        
         }
     }
     
@@ -164,20 +166,11 @@ class Mapview {
         render() {
             const confirm = document.getElementById("confirmation")
             confirm.addEventListener("click", this.onConfirm)
+            document.getElementById("beware").textContent = "N'oubliez pas de signer et de confirmer la réservation"
         }
     }
     
-    class FooterController {
-        constructor() {
-            this.startTime = null
-    
-        }
-        play() {}
-    }
-    
-    class FooterView {
-        render() {}
-    }
+
     
     const info = new InfoStationController()
     const map = new MapController(info.view.render)
@@ -186,5 +179,8 @@ class Mapview {
         lastName
     }) => {
         alert(`${firstName} ${lastName} confirme la réservation `)
+        let timer = new FooterController;
+        timer.play()
+        
     })
     
