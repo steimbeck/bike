@@ -26,7 +26,7 @@ class FooterController {
             
             return
                     }
-        //setInterval(this.play, 1000)
+        setTimeout(this.play, 1000)
  
     
     }
@@ -39,11 +39,11 @@ class FooterController {
 class FooterView {
     render (diffDate) {
         console.log(diffDate)
-        const minutes = Math.round(diffDate / 1000 / 60)
-        const secondes = Math.round((diffDate / 1000) % 60)
+        const minutes = Math.floor(diffDate / 1000 / 60)
+        const secondes = Math.floor((diffDate / 1000) % 60)
        
         document.getElementById("infos").textContent = (`Votre réservation est disponible à l'adresse:  durant ${minutes} minutes et ${secondes} secondes`);
-        this.play = document.getElementById('timer');
+        
         let storageFirstName =localStorage.setItem('firstname','firstname');
         let storageName =localStorage.setItem('lastName','LastName');
         let storageStation =localStorage.setItem('station','station');

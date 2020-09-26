@@ -22,7 +22,7 @@
        
         <div id="map"></div>
     
-        <div>
+        <div id= infostation>
             <h3 id="detail"></h3>
             <p id="stationName"></p>
             <p id="status_station"></p>
@@ -33,28 +33,29 @@
 
     </div>
 
-        <div id="form">
-        <form id="bookingForm">
+        <div id ="form">
+        <form id ="bookingForm">
             <label>
                 Prénom
-                <input id="firstName" />
-            </label>
+                <input id="firstName" name ="Prénom" required minlength = "5"/>
+            </label><br><br>
             <label>
                 Nom
-                <input id="lastName" />
-            </label>
-        </form><br><br>
+                <input id="lastName" name = name required minlength = "5" />
+            </label><br><br>
+     
         <button id="submit">réserver</button><br><br>
-        <span id ="beware"></span>
-    </div><br>
-    <div>
+        <span id ="beware"></span><br><br>
+    
+    <div id="bsign">
         <canvas id="canvas"></canvas><br>
         <span id="cleansign">Refaire la signature</span>
-        <button id="confirmation">confirmer</button>
-    </div><br><br>
-    <div id = time>
-    <span id="infos"></span>
-    <span id ="timer"></span>
+        <button id="confirmation">confirmer</button><br><br>
+            </form>
+    
+    
+        <span id="infos"></span>
+            <span id ="timer"></span>
     </div>
 
         

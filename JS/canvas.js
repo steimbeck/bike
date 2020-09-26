@@ -78,5 +78,7 @@ class SignCanvas {
 
 }
 
+
+
 let obj = new SignCanvas();
 obj.moveSign();

@@ -154,8 +154,8 @@ class Mapview {
         render() {
             const form = document.getElementById('bookingForm')
             document.getElementById('submit').addEventListener('click', () => this.onSubmit(form))
-            //alert("Noubliez pas de signer et de confirmer la réservation")
-        
+           
+           
         }
     }
     
@@ -164,9 +164,11 @@ class Mapview {
             this.onConfirm = onConfirm
         }
         render() {
+            event.preventDefault()
             const confirm = document.getElementById("confirmation")
             confirm.addEventListener("click", this.onConfirm)
             document.getElementById("beware").textContent = "N'oubliez pas de signer et de confirmer la réservation"
+             document.getElementById("bsign").style = "display : block";
         }
     }
     
@@ -181,6 +183,6 @@ class Mapview {
         alert(`${firstName} ${lastName} confirme la réservation `)
         let timer = new FooterController;
         timer.play()
-        
+        event.preventDefault()
     })
     

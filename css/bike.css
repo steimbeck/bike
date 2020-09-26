@@ -86,12 +86,21 @@ img
     
     
 }
+#form
+{
+
+    display:flex;
+    justify-content:flex-end;
+}
 #beware
 {
     
     color:#a3095b;
 }
+#bsign{
 
+    display:none;
+}
 
 #canvas{
 
