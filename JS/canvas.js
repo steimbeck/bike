@@ -36,7 +36,7 @@ class SignCanvas {
         // });
         document.addEventListener("mouseup", (e) => {
                 pen.draw = false;
-        });
+        }); 
 
 
 
