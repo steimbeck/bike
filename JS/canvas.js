@@ -38,6 +38,52 @@ class SignCanvas {
                 pen.draw = false;
         }); 
 
+        // Stop scrolling (touch)
+        document.body.addEventListener("touchstart", function (e) {
+            if (e.target == self.canvas) {
+                e.preventDefault();
+            }
+        });
+
+        document.body.addEventListener("touchend", function (e) {
+            if (e.target == self.canvas) {
+                e.preventDefault();
+            }
+        });
+
+        document.body.addEventListener("touchmove", function (e) {
+            if (e.target == self.canvas) {
+                e.preventDefault();
+            }
+        });
+
+
+        // Touchpad
+        this.sign.addEventListener("touchstart", function (e) {
+           self.mousePosition = self.getTposition(e);
+            var touch = e.touches[0];
+            var mouseEvent = new MouseEvent("mousedown", {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            self.canvas.dispatchEvent(mouseEvent);
+        });
+
+        this.sign.addEventListener("touchmove", function (e) {
+            var touch = e.touches[0];
+            var mouseEvent = new MouseEvent("mousemove", {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            self.canvas.dispatchEvent(mouseEvent);
+        });
+
+        this.sign.addEventListener("touchend", function (e) {
+            var mouseEvent = new MouseEvent("mouseup", {});
+            self.canvas.dispatchEvent(mouseEvent);
+        });
+
+ 
 
 
         

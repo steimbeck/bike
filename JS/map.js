@@ -116,73 +116,13 @@ class Mapview {
     class InfoStationView {
         render(station) {
             document.getElementById("detail").textContent = "Détail de la station"
+            document.getElementById("infostation").style.cssText="border:2px solid black;background-color: rgba( 58, 221, 180, 0.195 );"
             document.getElementById("stationName").textContent =  `Station :   ${station.name}`
             document.getElementById("status_station").textContent = `Status:  ${station.status}` 
             document.getElementById("stationAddress").textContent = `Adresse: ${station.address}`
             document.getElementById("bike_space").textContent = `Nombre d'emplacements : ${station.bike_stands}`
             document.getElementById("number_bike").textContent = `Nombre de vélos disponibles  : ${station.available_bikes}`
-    
-    
+              
         }
     }
-    
-    class FormulaireController {
-        constructor(onConfirm) {
-            this.firstName = ""
-            this.lastName = ""
-            this.view = new FormulaireView(
-                (form) => {
-                    this.firstName = form.firstName.value
-                    this.lastName = form.lastName.value
-                    this.view = new CanvasView(
-                        () => onConfirm({
-                            firstName: this.firstName,
-                            lastName: this.lastName
-                        })
-                    )
-                    this.view.render();
-                }
-            )
-            this.view.render()
-        }
-    }
-    
-    class FormulaireView {
-        constructor(onSubmit) {
-            this.onSubmit = onSubmit
-        }
-        render() {
-            const form = document.getElementById('bookingForm')
-            document.getElementById('submit').addEventListener('click', () => this.onSubmit(form))
-           
-           
-        }
-    }
-    
-    class CanvasView {
-        constructor(onConfirm) {
-            this.onConfirm = onConfirm
-        }
-        render() {
-            event.preventDefault()
-            const confirm = document.getElementById("confirmation")
-            confirm.addEventListener("click", this.onConfirm)
-            document.getElementById("beware").textContent = "N'oubliez pas de signer et de confirmer la réservation"
-             document.getElementById("bsign").style = "display : block";
-        }
-    }
-    
-
-    
-    const info = new InfoStationController()
-    const map = new MapController(info.view.render)
-    const form = new FormulaireController(({
-        firstName,
-        lastName
-    }) => {
-        alert(`${firstName} ${lastName} confirme la réservation `)
-        let timer = new FooterController;
-        timer.play()
-        event.preventDefault()
-    })
     

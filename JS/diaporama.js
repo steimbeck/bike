@@ -8,21 +8,21 @@ class DiapoController {
         })
         this.diapoList = new DiapoList();
         this.diapoList.addDiapo(new Diapo({
-            title: "diapo 1",
-            description: "Ma première diapo",
-            imgSrc:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80",
-            
-        }))
-        this.diapoList.addDiapo(new Diapo({
-            title: "diapo 2",
-            description: "Ma deuxième diapo",
+            title: "Bienvenue à Nantes  Roulez écolo sans pression",
+            description: "Venez profiter de nos vélos dernière génération",
             imgSrc:"image/bicloo20.jpg",
             
         }))
         this.diapoList.addDiapo(new Diapo({
-            title: "diapo 3",
-            description: "Ma troisème diapo",
-            imgSrc:"https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+            title: "Choisissez la station la plus proche",
+            description: "Cliquez sur la borne souhaitée",
+            imgSrc:"image/Station_velo.png",
+            
+        }))
+        this.diapoList.addDiapo(new Diapo({
+            title: "Remplissez le formulaire",
+            description: "Aprés la signature et la confirmation vous disposez de 20 minutes pour récuperer votre vélo",
+            imgSrc:"image/Form_canvas.png",
             
             
         }))
