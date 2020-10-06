@@ -83,7 +83,7 @@ class SignCanvas {
             self.canvas.dispatchEvent(mouseEvent);
         });
 
- 
+        
 
 
         
