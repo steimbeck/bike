@@ -64,7 +64,7 @@
                 
                 const selectedStation = sessionStorage.getItem('selectedStation')
                 
-                const form2 = document.querySelector("#form");
+                
                 const name = document.getElementById("lastName").value = localStorage.getItem("lastName");
                 const surName= document.getElementById("firstName").value = localStorage.getItem("firstName");
                 localStorage.setItem('firstName', firstName);
