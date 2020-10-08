@@ -4,9 +4,10 @@ class SignCanvas {
     constructor() { 
         this.sign = document.getElementById("canvas");
         this.ctx = this.sign.getContext('2d');
-        this.ctx.strokeStyle = '#006400';
+        this.ctx.strokeStyle = 'green';
         this.ctx.lineWidth = 4;
-        this.draw = false;
+         canvas.width = 240; 
+         canvas.height = 155;
         this.mousePosition = {
             x: 0,
             y: 0
