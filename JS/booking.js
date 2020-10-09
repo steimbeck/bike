@@ -31,13 +31,14 @@
         info.view.render(station)
 
     })
+    const timer = new FooterController;
     const form = new FormulaireController(({
         firstName,
         lastName
     }) => {
         alert(`${firstName} ${lastName} confirme la réservation `)
         event.preventDefault()
-                const timer = new FooterController;
+                
                 
                 const selectedStation = sessionStorage.getItem('selectedStation')
                 
@@ -50,6 +51,7 @@
                 const bookDate = Date.now()
                 timer.setBookDate(bookDate)
                 sessionStorage.setItem('lastBook', bookDate)
+                timer.clear()
                 timer.play();
                 console.log(name);
                 console.log(surName);

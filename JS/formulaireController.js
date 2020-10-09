@@ -29,11 +29,12 @@ class FooterController {
                     }
 
      this.view.render(nbMinMax * 60 * 1000 - diffDate,this.bookedStation)
-        setTimeout(this.play, 1000)
- 
-    
+        this.nextPlay = setTimeout(this.play,1000)
     }
-    
+    clear(){
+        clearTimeout(this.nextPlay)
+        this.view.clear()
+    }
 
     }
 
